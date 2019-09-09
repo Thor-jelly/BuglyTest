@@ -25,6 +25,8 @@ public class MyApp extends Application {
     }
 
     private void initBugly() {
+//        CrashReport.initCrashReport(getApplicationContext());
+//        CrashReport.initCrashReport(getApplicationContext(), "e56ae7cc9c", BuildConfig.DEBUG);
 
         Context context = getApplicationContext();
         // 获取当前包名
@@ -36,9 +38,9 @@ public class MyApp extends Application {
         strategy.setUploadProcess(processName == null || processName.equals(packageName));
         // 初始化Bugly
         //        CrashReport.initCrashReport(context, "注册时申请的APPID", isDebug, strategy);
-        CrashReport.initCrashReport(getApplicationContext(), "e56ae7cc9c", BuildConfig.DEBUG, strategy);
+//        CrashReport.initCrashReport(getApplicationContext(), "e56ae7cc9c", BuildConfig.DEBUG, strategy);
         // 如果通过“AndroidManifest.xml”来配置APP信息，初始化方法如下
-        // CrashReport.initCrashReport(context, strategy);
+         CrashReport.initCrashReport(context, strategy);
     }
 
     /**
