@@ -32,4 +32,13 @@
         android:gravity="center"
         android:text="异常上报测试"
         android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/apply_path_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ef0000"
+        android:gravity="center"
+        android:text="应用补丁"
+        android:textColor="@android:color/white" />
 </LinearLayout>
